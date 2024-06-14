@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bug Tracking Report</title>
+</head>
+<body>
+<h1>Bug Tracking Report</h1>
+<p>Total Comments: {{ report_data.total_comments }}</p>
+<p>Frequent Words:</p>
+<ul>
+{% for word in report_data.frequent_words %}
+<li>{{ word }}</li>
+{% endfor %}
+</ul>
+<p>Sentiment Analysis:</p>
+<ul>
+<li>Positive: {{ report_data.sentiment_analysis.positive }}%</li>
+<li>Negative: {{ report_data.sentiment_analysis.negative }}%</li>
+</ul>
+</body>
+</html>
+
